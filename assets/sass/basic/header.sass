@@ -1,0 +1,92 @@
+.header
+  position: fixed
+  width: 100%
+  padding: 23px 0
+  background-color: $basic-color
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25)
+  z-index: 1000000000000000000
+  &__container
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+  &__img
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 27px
+  &__burger
+    display: none
+    cursor: pointer
+  &__body
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    max-width: 906px
+    width: 100%
+    align-items: center
+  &__content
+    max-width: 546px
+    width: 100%
+  &__btn
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    @include AdaptivePadding(8, 16, 21, 42)
+    width: auto
+    font-family: 'Roboto Medium'
+    font-weight: 600
+    @include AdaptiveFont(15, 17, 18, 20)
+    color: $text-color
+    border: 1px solid $text-color
+    border-radius: 30px
+    transition: all 0.5s
+    &-img
+      display: inline-block
+      width: 20px
+      height: 20px
+      fill: black
+    &:hover
+      color: $basic-color
+      border: 1px solid $basic-color
+      background: linear-gradient(to right, #01ff84, #01eaff)
+      background: linear-gradient(to right, $background-color, #37f877)
+      background: linear-gradient(to right, $background-color, #01ff84)
+      background: linear-gradient(to right, #01ff84, $background-color, #01eaff)
+      background: linear-gradient(to right, #ffff01, #01ff7c)
+      background: linear-gradient(to right, $background-color, #00ffda)
+      background: linear-gradient(to right, $background-color 20%, #00ffb8 100%)
+      text-shadow: 0 0 15px $basic-color, 0 0 60px $basic-color, 0 0 120px $basic-color
+      & > .header__btn-img
+          fill: white
+          transition: 0.5s
+
+.prompt
+  font-family: 'Roboto-Regular'
+  font-size: 14px
+  line-height: 6px
+  padding: 10px
+  position: fixed
+  background-color: #04e1ff
+  color: #f1f1f1
+  border-radius: 0 6px 6px 6px
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    top: -0.6vh
+    width: 0
+    height: 0
+    border-left: 0.4vw solid $basic-color
+    border-right: 0.4vw solid $basic-color
+    border-bottom: 0.4vw solid #06d8f5
+    z-index: 1000000000

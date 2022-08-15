@@ -1,0 +1,29 @@
+// Mixin
+$layoutSize: 1920
+
+@mixin AdaptiveFont($minSize, $maxSize, $minLh, $maxLh)
+  $DesktopSize: $maxSize - $minSize
+  $MobSize: $DesktopSize + $DesktopSize * 0.7
+  $DesktopLh: $maxLh - $minLh
+  $MobLh: $DesktopLh + $DesktopLh * 0.7
+  @media screen and (min-width: 768px)
+    font-size: calc(#{$minSize + px} + #{$DesktopSize} * (100vw / #{$layoutSize}))
+    line-height: calc(#{$minLh + px} + #{$DesktopLh} * (100vw / #{$layoutSize}))
+  @media screen and (max-width: 768px)
+    font-size: calc(#{$minSize + px} + #{$MobSize} * ((100vw - 320px) / #{$layoutSize}))
+    line-height: calc(#{$minLh + px} + #{$MobLh} * ((100vw - 320px) / #{$layoutSize}))
+
+@mixin AdaptivePadding($minLeft, $maxLeft, $minTop, $maxTop)
+  $DesktopSize: $maxLeft - $minLeft
+  $MobSize: $DesktopSize + $DesktopSize * 0.7
+  $DesktopLh: $maxTop - $minTop
+  $MobLh: $DesktopLh + $DesktopLh * 0.7
+
+  $DesktopLeft: $maxLeft - $minLeft
+  $MobLeft: $DesktopSize + $DesktopSize * 0.7
+  $DesktopTop: $maxTop - $minTop
+  $MobTop: $DesktopLh + $DesktopLh * 0.7
+  @media screen and (min-width: 768px)
+    padding: calc(#{$minLeft + px} + #{$DesktopLeft} * (100vw / #{$layoutSize})) calc(#{$minTop + px} + #{$DesktopTop} * (100vw / #{$layoutSize}))
+  @media screen and (max-width: 768px)
+    padding: calc(#{$minLeft + px} + #{$MobLeft} * ((100vw - 320px) / #{$layoutSize})) calc(#{$minTop + px} + #{$MobTop} * ((100vw - 320px) / #{$layoutSize}))
