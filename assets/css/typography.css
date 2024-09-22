@@ -1,0 +1,53 @@
+@font-face {
+	font-family: '';
+	src: url('../fonts/');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: '';
+	src: url('../fonts/');
+	font-display: swap;
+}
+
+h1 {
+	font-family: var(--font--primary);
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 48px;
+}
+
+h2 {
+	font-family: var(--font--primary);
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 36px;
+}
+
+h3 {
+	font-family: var(--font--primary);
+	font-weight: 700;
+	font-size: 19px;
+	line-height: 28.5px;
+}
+
+h4 {
+	font-family: var(--font--primary);
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+h5 {
+	font-family: var(--font--primary);
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 21px;
+}
+
+p {
+	font-family: var(--font--primary);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+}

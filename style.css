@@ -1,0 +1,6 @@
+@import 'assets/css/typography.css';
+@import 'assets/css/var.css';
+
+img {
+	max-width: 100%;
+}

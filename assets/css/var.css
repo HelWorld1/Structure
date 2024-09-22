@@ -1,0 +1,18 @@
+:root {
+	--color--white: #fff;
+	--color--black: #000;
+	--color--grey: ;
+	--color--red: ;
+	--color--green: ;
+	--color--blue: ;
+
+	--color--bg: ;
+	--color--menu: ;
+	--color--text: ;
+	--color--text_link: ;
+
+	--font--primary: 'Verdana';
+	--font--secondary: '';
+
+	--local-img: 'assets/img';
+}
